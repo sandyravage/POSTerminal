@@ -38,14 +38,15 @@ namespace POSTerminal2
             }
             return datetime;
         }
-        public static int DeleteValidator(List<Task> Tasks, string input)
+
+        public static int IndexValidator(List<Product> Products, string input)
         {
             int newinput;
             while(!int.TryParse(input, out newinput))
             {
-                while (newinput > Tasks.Count - 1 || newinput < 1)
+                while (newinput > Products.Count - 1 || newinput < 1)
                 {
-                    Console.Write($"\nInvalid selection. Please choose a number between 1 and {Tasks.Count}: ");
+                    Console.Write($"\nInvalid selection. Please choose a number between 1 and {Products.Count}: ");
                     input = Console.ReadLine();
                     break;
                 }
@@ -63,6 +64,12 @@ namespace POSTerminal2
         {
             Console.Write("\nPress any key to continue . . .");
             Console.ReadKey();
+        }
+
+        public static string Continuer(string message)
+        {
+            Console.Write($"{message}");
+            return YesNoChecker(Console.ReadLine());
         }
     }
 }

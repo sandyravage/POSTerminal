@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace POSTerminal2
-{
+{ 
     class Product
     {
         private static int counter = 1;
@@ -30,6 +30,16 @@ namespace POSTerminal2
                 $"\n   Genre: {_category} " +
                 $"\n   Description: {_description} " +
                 $"\n   Price: ${_price}";
+        }
+
+        public int GetItemID()
+        {
+            return _listnum;
+        }
+
+        public double GetPrice()
+        {
+            return _price;
         }
     }
 }

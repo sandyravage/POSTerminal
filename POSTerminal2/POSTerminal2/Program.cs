@@ -55,26 +55,29 @@ namespace POSTerminal2
                 case "1":
                     Console.Clear();
                     ListFunctions.ListDisplay(ref products);
-                    Validator.Continue();
                     break;
                 case "2":
                     Console.Clear();
                     ListFunctions.KeywordDisplay(ref products, Validator.ReadLineMessage("Enter a search term: "));
-                    Validator.Continue();
                     break;
                 case "3":
-
+                    Console.Clear();
+                    ListFunctions.AddItem(ref shoppingList, products);
                     break;
                 case "4":
-
+                    Console.Clear();
+                    ListFunctions.RemoveItem(ref shoppingList);
                     break;
                 case "5":
-
+                    Console.Clear();
+                    ListFunctions.ListDisplay(ref shoppingList);
+                    Console.Write($"\nCurrent total price: {ListFunctions.GetTotal(ref shoppingList)}\n");
                     break;
                 case "6":
 
                     break;
                 case "7":
+                    Console.Clear();
                     Console.WriteLine("\nThanks for shopping fam. Take it easy.");
                     System.Threading.Thread.Sleep(2000);
                     Environment.Exit(0);
@@ -82,6 +85,7 @@ namespace POSTerminal2
                 default:
                     break;
             }
+            Validator.Continue();
             Console.Clear();
             MainMenu();
         }
