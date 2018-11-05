@@ -1,0 +1,7 @@
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\obj\Debug\POSTerminal2.csproj.CoreCompileInputs.cache
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\bin\Debug\POSTerminal2.exe.config
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\bin\Debug\POSTerminal2.exe
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\bin\Debug\POSTerminal2.pdb
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\obj\Debug\POSTerminal2.exe
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\obj\Debug\POSTerminal2.pdb
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2\obj\Debug\POSTerminal2.csprojAssemblyReference.cache
