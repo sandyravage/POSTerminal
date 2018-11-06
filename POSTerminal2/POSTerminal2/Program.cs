@@ -80,7 +80,10 @@ namespace POSTerminal2
                     Console.Clear();
                     ListFunctions.ListDisplay(shoppingList,2);
                     Console.Write($"\nCurrent total price: ${ListFunctions.GetTotal(ref shoppingList,2):0.00}\n");
-                    SoundSampler.Caller(Validator.YesNoChecker(Validator.ReadLineMessage("Would you like to listen to a product? (y/n): ")), shoppingList);
+                    if (shoppingList.Count > 0)
+                    {
+                        SoundSampler.Caller(Validator.YesNoChecker(Validator.ReadLineMessage("Would you like to listen to a product? (y/n): ")), shoppingList);
+                    }
                     break;
                 case "6":
                     Console.Clear();
