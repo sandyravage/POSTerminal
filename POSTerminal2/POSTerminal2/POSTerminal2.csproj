@@ -48,7 +48,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoundSampler.cs" />
-    <Compile Include="TransactionValidator.cs" />
+    <Compile Include="Transactions.cs" />
     <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup>

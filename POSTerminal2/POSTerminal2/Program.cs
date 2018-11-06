@@ -79,7 +79,7 @@ namespace POSTerminal2
                 case "5":
                     Console.Clear();
                     ListFunctions.ListDisplay(shoppingList,2);
-                    Console.Write($"\nCurrent total price: {ListFunctions.GetTotal(ref shoppingList)}\n");
+                    Console.Write($"\nCurrent total price: ${ListFunctions.GetTotal(ref shoppingList,2):0.00}\n");
                     break;
                 case "6":
                     Console.Clear();
@@ -88,17 +88,23 @@ namespace POSTerminal2
                     {
                         break;
                     }
+                    else if(shoppingList.Count == 0)
+                    {
+                        Console.Clear();
+                        Console.Write("\nYou can't check out because your cart is empty!");
+                        break;
+                    }
                     else
                     {
-                        Transactions.PaymentChoice(Transactions.PaymentTypeValidator(Validator.ReadLineMessage("Enter payment type - Cash, Credit, or Check: ")));
+                        Transactions.PaymentChoice(Transactions.PaymentTypeValidator(Validator.ReadLineMessage("Enter payment type - cash, credit, or check: ")));
                         Validator.Continue();
                         Console.Clear();
                         Console.Write("\nThank you for shopping today." +
-                            "\nYour receipt today is: ");
+                            "\nYour receipt is: \n");
                         ListFunctions.ListDisplay(shoppingList, 4);
-                        Console.Write($"\nSubtotal: {total}}" +
-                            $"\nTax: {total*0.06 - total}" +
-                            $"\nGrand Total: {total*0.06}" +
+                        Console.Write($"\nSubtotal: ${total}" +
+                            $"\nTax: ${total*0.06:0.00}" +
+                            $"\nGrand Total: ${total*0.06 + total:0.00}" +
                             $"\nYour payment info: {cashString}{creditCard}{check}");
                         Validator.Continue();
                         Environment.Exit(0);
@@ -113,7 +119,7 @@ namespace POSTerminal2
                 default:
                     break;
             }
-            total = ListFunctions.GetTotal(ref shoppingList);
+            total = ListFunctions.GetTotal(ref shoppingList,1);
             Validator.Continue();
             Console.Clear();
             MainMenu();

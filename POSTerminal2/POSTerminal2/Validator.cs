@@ -41,7 +41,7 @@ namespace POSTerminal2
 
         public static string ReadLineMessage(string message)
         {
-            Console.Write($"{message}\n");
+            Console.Write($"{message}");
             return Console.ReadLine();
         }
 
@@ -75,6 +75,7 @@ namespace POSTerminal2
             while (!int.TryParse(input, out newinput))
             {
                 Console.Write($"\nInvalid selection. Please enter a number: ");
+                input = Console.ReadLine();
             }
             while (true)
             {

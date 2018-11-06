@@ -25,24 +25,31 @@ namespace POSTerminal2
                         $"\nQuantity: {item.GetQuantity()}\n");
                 }
             }
-            else
+            else if(input == 3)
             {
                 for(int i = 0; i < list.Count; i++)
                 {
                     Console.WriteLine($"{list[i].GetItemID()}: {list[i].GetName()}");
                 }
             }
+            else
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    Console.WriteLine($"{list[i].GetName()} X {list[i].GetQuantity()}");
+                }
+            }
 
         }
 
-        public static double GetTotal(ref List<Product> ShoppingList)
+        public static double GetTotal(ref List<Product> ShoppingList, int input)
         {
             double sum = 0;
             foreach (var item in ShoppingList)
             {
                 sum += item.GetPrice()*item.GetQuantity();
             }
-            if(ShoppingList.Count == 0)
+            if(ShoppingList.Count == 0 && input == 2)
             {
                 Console.Write("Cart Empty\n");
             }
@@ -89,6 +96,7 @@ namespace POSTerminal2
                 choice = Validator.Continuer("Would you like to add another item to your list? (y/n): ");
             }
         }
+
         public static void RemoveItem(ref List<Product> ShoppingList)
         {
             string choice = "y";
