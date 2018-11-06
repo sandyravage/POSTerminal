@@ -8,12 +8,31 @@ namespace POSTerminal2
 {
     class ListFunctions
     {
-        public static void ListDisplay(ref List<Product> list)
+        public static void ListDisplay(List<Product> list, int input)
         {
-            foreach (var item in list)
+            if (input == 1)
             {
-                Console.WriteLine($"{item}\n");
+                foreach (var item in list)
+                {
+                    Console.WriteLine($"\n{item}\n");
+                }
             }
+            else if(input == 2)
+            {
+                foreach (var item in list)
+                {
+                    Console.WriteLine($"\n{item}" +
+                        $"\nQuantity: {item.GetQuantity()}\n");
+                }
+            }
+            else
+            {
+                for(int i = 0; i < list.Count; i++)
+                {
+                    Console.WriteLine($"{list[i].GetItemID()}: {list[i].GetName()}");
+                }
+            }
+
         }
 
         public static double GetTotal(ref List<Product> ShoppingList)
@@ -21,11 +40,11 @@ namespace POSTerminal2
             double sum = 0;
             foreach (var item in ShoppingList)
             {
-                sum += item.GetPrice();
+                sum += item.GetPrice()*item.GetQuantity();
             }
             if(ShoppingList.Count == 0)
             {
-                Console.Write("\nCart Empty\n");
+                Console.Write("Cart Empty\n");
             }
             return sum;
         }
@@ -62,7 +81,9 @@ namespace POSTerminal2
                 {
                     if (product.GetItemID() == Item)
                     {
+                        product.SetQuantity(Validator.QuantityValidator(Validator.ReadLineMessage("Enter a quantity: ")));
                         ShoppingList.Add(product);
+                        Console.Write("\nItem added to cart!\n");
                     }
                 }
                 choice = Validator.Continuer("Would you like to add another item to your list? (y/n): ");
@@ -71,16 +92,18 @@ namespace POSTerminal2
         public static void RemoveItem(ref List<Product> ShoppingList)
         {
             string choice = "y";
+            int Item;
             while (choice == "y")
             {
-                int Item = Validator.IndexValidator(ShoppingList, Validator.ReadLineMessage("Enter the number of the item you wish to remove: "));
-                foreach (var product in ShoppingList)
+                Item = Validator.ItemIDValidator(ShoppingList, Validator.ReadLineMessage("Enter the number of the item you wish to remove: "));
+                foreach (Product product in ShoppingList.ToList())
                 {
                     if (product.GetItemID() == Item)
                     {
                         ShoppingList.Remove(product);
                     }
                 }
+                Console.Write("\nItem Removed!\n");
                 choice = Validator.Continuer("Would you like to remove another item from your list? (y/n): ");
             }
         }
