@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace POSTerminal2
 {
-    class Transactions
+    public class Transactions
     {
         public static string PaymentTypeValidator(string input)
         {

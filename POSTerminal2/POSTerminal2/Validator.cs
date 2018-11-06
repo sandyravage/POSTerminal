@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POSTerminal2
 {
-    class Validator
+    public class Validator
     {
         public static string YesNoChecker(string choice) //validates the many y/n decisions in this program
         {
@@ -28,7 +28,7 @@ namespace POSTerminal2
             return input;
         }
 
-        public static int IndexValidator(List<Product> Products, string input)
+        internal static int IndexValidator(List<Product> Products, string input)
         {
             int newinput;
             while(!int.TryParse(input, out newinput) || newinput > Products.Count || newinput < 1)
@@ -68,7 +68,7 @@ namespace POSTerminal2
             return newinput;
         }
 
-        public static int ItemIDValidator(List<Product> ShoppingList, string input)
+        internal static int ItemIDValidator(List<Product> ShoppingList, string input)
         {
             int i = 0;
             int newinput;

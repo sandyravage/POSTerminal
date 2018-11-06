@@ -45,8 +45,7 @@ namespace POSTerminal2
         }
 
         public static void MainMenu()//adds options to access all other methods
-        {
-            
+        {            
             Console.Write("Please enter a number corresponding to the following options:" +
                 "\n1): View Entire List of Products" +
                 "\n2): View List by Keyword" +

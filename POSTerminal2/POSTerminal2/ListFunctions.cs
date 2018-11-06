@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace POSTerminal2
 {
-    class ListFunctions
-    {
-        public static void ListDisplay(List<Product> list, int input)
+    public class ListFunctions
+    { 
+        internal static void ListDisplay(List<Product> list, int input)
         {
             if (input == 1)
             {
@@ -42,7 +42,7 @@ namespace POSTerminal2
 
         }
 
-        public static double GetTotal(ref List<Product> ShoppingList, int input)
+        internal static double GetTotal(ref List<Product> ShoppingList, int input)
         {
             double sum = 0;
             foreach (var item in ShoppingList)
@@ -56,7 +56,7 @@ namespace POSTerminal2
             return sum;
         }
 
-        public static void KeywordDisplay(ref List<Product> Products, string search)
+        internal static void KeywordDisplay(ref List<Product> Products, string search)
         {
             Console.Clear();
             int i = 0;
@@ -78,7 +78,7 @@ namespace POSTerminal2
             }
         }
 
-        public static void AddItem(ref List<Product> ShoppingList, List<Product> Products)
+        internal static void AddItem(ref List<Product> ShoppingList, List<Product> Products)
         {
             string choice = "y";
             while(choice == "y")
@@ -97,7 +97,7 @@ namespace POSTerminal2
             }
         }
 
-        public static void RemoveItem(ref List<Product> ShoppingList)
+        internal static void RemoveItem(ref List<Product> ShoppingList)
         {
             string choice = "y";
             int Item;

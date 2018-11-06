@@ -1,0 +1,17 @@
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\POSTerminal2Tests.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\POSTerminal2Tests.pdb
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\POSTerminal2.exe
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\POSTerminal2.pdb
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\POSTerminal2.exe.config
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\obj\Debug\POSTerminal2Tests.csprojAssemblyReference.cache
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\obj\Debug\POSTerminal2Tests.csproj.CoreCompileInputs.cache
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\obj\Debug\POSTerminal2Tests.csproj.CopyComplete
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\obj\Debug\POSTerminal2Tests.dll
+C:\Users\TEVERTS\source\repos\POSTerminal2\POSTerminal2Tests\obj\Debug\POSTerminal2Tests.pdb
